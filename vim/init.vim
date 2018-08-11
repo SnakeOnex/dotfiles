@@ -1,4 +1,5 @@
 set number
+set relativenumber
 
 filetype on
 syntax on
