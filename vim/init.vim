@@ -17,7 +17,9 @@ set autoindent
 " setting tab to be 4 spaces
 set tabstop=4
 set softtabstop=0 noexpandtab
-set shiftwidth=4
+set shiftwidth=2
+
+set clipboard=unnamedplus
 
 
 

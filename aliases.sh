@@ -2,5 +2,10 @@ alias o=xdg-open
 alias vim=nvim
 alias tensor='source activate tensorflow'
 alias deactivate='source deactivate'
-alias torch='source activate torch'
+alias torch='source activate pytorch'
 alias fastai='source activate fastai'
+alias mongod='sudo mongod --dbpath=/var/lib/mongodb'
+alias redshift='redshift -l 49.3088:14.147'
+
+# added by Anaconda3 installer
+export PATH="/home/snakeone/anaconda3/bin:$PATH"
