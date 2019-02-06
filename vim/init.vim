@@ -32,7 +32,10 @@ set hlsearch
 set noshowmode
 
 "let g:deoplete#enable_at_startup = 1
+"
+map <F5> :<C-U>!g++ -O2 -DLOCAL -std=c++14 -Wall -Wextra -Wno-unused-result -static %:r.cpp -o %:r<CR>
 
+map <F9> :<C-U>!./%:r<CR>
 " vim plug
 call plug#begin('~/.vim/plugged')
 
