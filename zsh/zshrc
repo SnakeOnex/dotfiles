@@ -96,4 +96,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+mkcd() {
+  mkdir "$1"
+  cd "$1"
+}
+
 source $HOME/dotfiles/aliases.sh
