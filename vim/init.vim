@@ -64,7 +64,7 @@ map <F9> :<C-U>!./%:r<CR>
 call plug#begin('~/.vim/plugged')
 
 Plug 'vimwiki/vimwiki'
-let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki',
+let g:vimwiki_list = [{'path': '~/ownCloud/vimwiki',
                        \ 'syntax': 'markdown', 'ext': '.md'}]
 
 " Autocomplete

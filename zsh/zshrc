@@ -101,4 +101,6 @@ mkcd() {
   cd "$1"
 }
 
+bindkey -v
+
 source $HOME/dotfiles/aliases.sh
