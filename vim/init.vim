@@ -24,6 +24,8 @@ set clipboard=unnamedplus
 set nocompatible
 filetype plugin on
 
+nmap <leader>f :NERDTreeToggle<CR>
+
 
 " NCM2
 augroup NCM2
@@ -77,6 +79,9 @@ Plug 'ncm2/ncm2-jedi'
 Plug 'lervag/vimtex'
 Plug 'Konfekt/FastFold'
 Plug 'matze/vim-tex-fold'
+
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
 
 "Plug 'morhetz/gruvbox'
 Plug 'plasticboy/vim-markdown'
