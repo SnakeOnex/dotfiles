@@ -3,7 +3,7 @@ set relativenumber
 
 filetype on
 syntax on
-colorscheme elflord
+colorscheme default
 let mapleader = ","
 
 set hidden
