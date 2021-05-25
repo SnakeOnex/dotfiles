@@ -3,6 +3,7 @@
 syntax on
 filetype on
 filetype indent on
+filetype plugin indent on " for haskell-vim
 
 set tabstop=4
 set softtabstop=4 expandtab
@@ -28,12 +29,13 @@ set hidden
 set history=100
 set noshowmode
 
+" haskell
+"let g:haskell_indent_if = 2
+
 
 
 colorscheme default
 let mapleader = ","
-
-
 
 set clipboard=unnamedplus
 
@@ -61,5 +63,9 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 
 Plug 'itchyny/lightline.vim'
+Plug 'neovimhaskell/haskell-vim'
+
+" haskell
+
 
 call plug#end()

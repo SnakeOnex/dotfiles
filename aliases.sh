@@ -10,7 +10,12 @@ alias redshift='redshift -l 49.3088:14.147'
 alias tusk='/opt/Tusk/tusk-app'
 
 # uni
+alias opt='cd ~/ownCloud/semester_4/opt'
+alias gvg='cd ~/ownCloud/semester_4/gvg'
+alias dbs='cd ~/ownCloud/semester_4/dbs'
 alias pdv='cd ~/ownCloud/semester_4/pdv'
+alias zui='cd ~/ownCloud/semester_4/zui'
+alias fup='cd ~/ownCloud/semester_4/fup'
 
 # added by Anaconda3 installer
 export PATH="/home/snakeone/anaconda3/bin:$PATH"
