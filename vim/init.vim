@@ -1,6 +1,7 @@
 " basics
 
 syntax on
+syntax enable
 filetype on
 filetype indent on
 filetype plugin indent on " for haskell-vim
@@ -34,13 +35,19 @@ set noshowmode
 
 
 
+" Vimtex
+let g:vimtex_view_method = 'zathura'
+
+
 colorscheme default
 let mapleader = ","
+let maplocalleader = ","
+"let mapleader = ","
 
 set clipboard=unnamedplus
 
 set nocompatible
-filetype plugin on
+filetype plugin indent on
 
 nmap <leader>f :NERDTreeToggle<CR>
 
@@ -65,7 +72,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'itchyny/lightline.vim'
 Plug 'neovimhaskell/haskell-vim'
 
-" haskell
+Plug 'lervag/vimtex'
 
 
 call plug#end()
