@@ -37,6 +37,17 @@ set noshowmode
 
 " Vimtex
 let g:vimtex_view_method = 'zathura'
+let g:tex_flavor = 'latex'
+
+"autocmd BufRead,BufNewFile   *.tex setlocal wrap linebreak nnoremap j gj nnoremap k gk
+
+autocmd BufRead,BufNewFile *.tex call SetTexOptions()
+
+function SetTexOptions()
+    setlocal wrap linebreak
+    nnoremap j gj
+    nnoremap k gk
+endfunction
 
 
 colorscheme default
