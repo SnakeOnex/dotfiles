@@ -41,7 +41,7 @@ let g:tex_flavor = 'latex'
 
 "autocmd BufRead,BufNewFile   *.tex setlocal wrap linebreak nnoremap j gj nnoremap k gk
 
-autocmd BufRead,BufNewFile *.tex call SetTexOptions()
+autocmd BufRead,BufNewFile *.tex,*.md call SetTexOptions()
 
 function SetTexOptions()
     setlocal wrap linebreak
