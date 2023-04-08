@@ -14,7 +14,7 @@ set autoindent
 set nowrap
 
 set smartcase
-set noswapfile
+"set noswapfile
 set nobackup
 
 set noerrorbells

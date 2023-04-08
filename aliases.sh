@@ -9,6 +9,8 @@ alias mongod='sudo mongod --dbpath=/var/lib/mongodb'
 alias redshift='redshift -l 49.3088:14.147'
 alias tusk='/opt/Tusk/tusk-app'
 
+alias c='xclip -selection clipboard'
+
 # uni
 alias opt='cd ~/ownCloud/semester_4/opt'
 alias gvg='cd ~/ownCloud/semester_4/gvg'
