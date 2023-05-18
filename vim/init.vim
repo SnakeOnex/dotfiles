@@ -66,6 +66,14 @@ nmap <silent> K <Plug>(coc-show-doc)
 " Use `<leader>r` to rename a symbol
 nmap <silent> <leader>r <Plug>(coc-rename)
 
+" Copilot
+
+" disable for md files
+let g:copilot_filetypes = {
+      \ 'markdown': v:false,
+      \ 'vimwiki': v:false,
+      \ }
+
 colorscheme default
 let mapleader = ","
 let maplocalleader = ","
@@ -130,6 +138,7 @@ require('lualine').setup {
   },
 }
 EOF
+
 
 
 
