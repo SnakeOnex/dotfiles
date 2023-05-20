@@ -33,6 +33,7 @@ set noshowmode
 let g:vimtex_view_method = 'zathura'
 let g:tex_flavor = 'latex'
 
+autocmd FileType vimwiki setlocal wrap linebreak | nnoremap <buffer> j gj | nnoremap <buffer> k gk
 autocmd BufRead,BufNewFile *.tex,*.md call SetTexOptions()
 function SetTexOptions()
     setlocal wrap linebreak
