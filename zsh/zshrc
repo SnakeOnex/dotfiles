@@ -117,5 +117,6 @@ function stopwatch(){
 }
 
 bindkey -v
+bindkey '^r' history-incremental-search-backward
 
 source $HOME/dotfiles/aliases.sh
