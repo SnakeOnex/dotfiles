@@ -66,6 +66,7 @@ nmap <silent> K <Plug>(coc-show-doc)
 
 " Use `<leader>r` to rename a symbol
 nmap <silent> <leader>r <Plug>(coc-rename)
+imap <C-b> `
 
 " Copilot
 
