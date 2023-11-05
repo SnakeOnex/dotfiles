@@ -1,8 +1,0 @@
-{
-    "editor.wordWrap": "on",
-    "editor.tabSize": 2,
-    "liveServer.settings.donotShowInfoMsg": true,
-    "emmet.includeLanguages": { "javascript": "javascriptreact", },
-    "emmet.triggerExpansionOnTab": true,
-    "vim.overrideCopy": false
-}
