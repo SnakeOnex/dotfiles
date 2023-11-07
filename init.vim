@@ -70,7 +70,6 @@ let g:copilot_filetypes = {
       \ 'vimwiki': v:false,
       \ }
 
-colorscheme default
 let mapleader = ","
 let maplocalleader = ","
 
@@ -139,3 +138,4 @@ require'nvim-treesitter.configs'.setup {
 }
 EOF
 
+colorscheme carbonfox
