@@ -80,7 +80,7 @@ map <F5> :<C-U>!g++ -O2 -DLOCAL -std=c++14 -Wall -Wextra -Wno-unused-result -sta
 call plug#begin('~/.vim/plugged')
 
 Plug 'vimwiki/vimwiki'
-let g:vimwiki_list = [{'path': '~/ownCloud/vimwiki',
+let g:vimwiki_list = [{'path': '~/owncloud/vimwiki',
                        \ 'syntax': 'markdown', 'ext': '.md'}]
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
