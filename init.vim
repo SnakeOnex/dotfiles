@@ -109,8 +109,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 
 call plug#end()
-"theme = 'ayu_dark', -- This changes the theme. Replace 'gruvbox' with your theme.
-
 " Lualine
 lua << EOF
 require('lualine').setup {
@@ -136,6 +134,17 @@ require'nvim-treesitter.configs'.setup {
     disable = { },  -- list of languages to disable highlighting for
   },
 }
-EOF
 
+require('nightfox').setup({
+    -- change carbonfox theme to have black background
+    palettes = {
+        carbonfox = {
+            bg1 = "#000000",
+        },
+        duskfox = {
+            bg1 = "#000000",
+        }
+    }
+})
+EOF
 colorscheme carbonfox
