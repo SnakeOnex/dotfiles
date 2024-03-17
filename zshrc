@@ -120,4 +120,7 @@ function stopwatch(){
 bindkey -v
 bindkey '^r' history-incremental-search-backward
 
+OPENAI_API_MODEL=gpt-4-1106-preview 
+
 source $HOME/dotfiles/aliases.sh
+source $HOME/.keys.sh
