@@ -120,7 +120,8 @@ function stopwatch(){
 bindkey -v
 bindkey '^r' history-incremental-search-backward
 
-OPENAI_API_MODEL=gpt-4-1106-preview 
+export OPENAI_API_MODEL=gpt-4-1106-preview 
+export CHATBLADE_THEME=github-dark
 
 source $HOME/dotfiles/aliases.sh
 source $HOME/.keys.sh
