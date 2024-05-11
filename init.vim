@@ -38,6 +38,12 @@ let g:tex_flavor = 'latex'
 "autocmd FileType vimwiki setlocal wrap linebreak | nnoremap <buffer> j gj | nnoremap <buffer> k gk
 "autocmd BufRead,BufNewFile *.tex,*.md call SetTexOptions()
 
+
+" set zz to be zA
+set foldmethod=indent
+set foldlevel=99
+nnoremap zz zA
+
 " fzf (Fuzzy search)
 nnoremap <C-p> :Files<CR>
 
