@@ -96,6 +96,12 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+# Start SSH agent if not already running
+#if [ -z "$SSH_AUTH_SOCK" ] ; then
+  #eval `ssh-agent -s` > /dev/null
+  #ssh-add -q ~/.ssh/*.pub
+#fi
 
 mkcd() {
   mkdir "$1"
