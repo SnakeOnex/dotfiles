@@ -119,7 +119,7 @@ call plug#end()
 lua << EOF
 require('lualine').setup {
   options = {
-    theme = 'ayu_light',
+    theme = 'ayu_dark',
     section_separators = {'', ''}, -- This removes the separators.
     component_separators = {'', ''}, -- This removes the separators.
     icons_enabled = true, -- This enables icons.
@@ -227,6 +227,6 @@ vim.keymap.set({ 'n', 'v' }, '<leader>i', anthropic_replace, { desc = 'llm anthr
 
 EOF
 "colorscheme carbonfox
-"colorscheme nightfox
+colorscheme nightfox
 " light theme
-colorscheme shine
+"colorscheme shine
