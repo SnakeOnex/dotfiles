@@ -65,16 +65,16 @@ vim.opt.splitbelow = true
 vim.g.mapleader = ","
 vim.g.maplocalleader = ","
 
+-- escape key in terminal
+vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", { noremap = true })
+
 -- Ensure you're in the correct mode for your mappings. Here, we use "n" for normal mode.
 vim.keymap.set("n", "<leader>|", "<C-w>v", { silent = true, desc = "Open new window vertically" })
 vim.keymap.set("n", "<leader>-", "<C-w>s", { silent = true, desc = "Open new window horizontally" })
 
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = bufnr })
 
--- add <leader>c to toggle comments
---vim.keymap.set("n", "<leader>c", "<Plug>Commentary", { silent = true, noremap = false })
---remap("n", "'", ":norm gcc<CR>")
--- in lua
+-- toggle comments
 vim.keymap.set("n", "<C-/>", function()
   vim.cmd("norm gcc")
 end)
@@ -239,6 +239,34 @@ require("lazy").setup({
         config = function()
             require("gitsigns").setup()
         end
+      },
+      {
+        "tpope/vim-fugitive",
+        config = function()
+            vim.keymap.set("n", "<leader>gs", ":Git<CR>", { desc = "Git status" })
+            vim.keymap.set("n", "<leader>gc", ":Git commit<CR>", { desc = "Git commit" })
+            vim.keymap.set("n", "<leader>gp", ":Git push<CR>", { desc = "Git push" })
+            vim.keymap.set("n", "<leader>gl", ":Git pull<CR>", { desc = "Git pull" })
+        end
+      },
+        -- lazy.nvim
+      {
+        "folke/noice.nvim",
+        event = "VeryLazy",
+        opts = {
+          -- add any options here
+          messages = {
+            enabled = false,
+          },
+        },
+        dependencies = {
+          -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+          "MunifTanjim/nui.nvim",
+          -- OPTIONAL:
+          --   `nvim-notify` is only needed, if you want to use the notification view.
+          --   If not available, we use `mini` as the fallback
+          "rcarriga/nvim-notify",
+          }
       }
   },
   -- Configure any other settings here. See the documentation for more details.
