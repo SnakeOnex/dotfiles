@@ -32,6 +32,7 @@ vim.opt.wrap = false
 
 -- Search settings
 vim.opt.smartcase = true
+vim.opt.cmdheight = 0
 
 -- File handling options
 -- vim.opt.swapfile = false  -- Commented out as per your note
