@@ -4,6 +4,11 @@ stylus="ELAN2514:00 04F3:42C1 Stylus Pen (0)"
 touchscreen="ELAN2514:00 04F3:42C1"
 eraser="ELAN2514:00 04F3:42C1 Stylus Eraser (0)" # stylus with a button pressed
 
+xinput --map-to-output 9 "$monitor"
+xinput --map-to-output 10 "$monitor"
+xinput --map-to-output 11 "$monitor"
+xinput --map-to-output 12 "$monitor"
+
 monitor-sensor \
 	| grep --line-buffered "Accelerometer orientation changed" \
 	| grep --line-buffered -o ": .*" \

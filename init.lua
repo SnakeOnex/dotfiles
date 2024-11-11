@@ -268,6 +268,28 @@ require("lazy").setup({
           --   If not available, we use `mini` as the fallback
           "rcarriga/nvim-notify",
           }
+      },
+      {
+        "folke/todo-comments.nvim",
+        dependencies = { "nvim-lua/plenary.nvim" },
+        opts = {
+            highlight = {
+                comments_only = false,
+            }
+            -- keywords = {
+            --     FIX = {
+            --         icon = "",
+            --         color = "error",
+            --         alt = { "FIXME", "BUG", "FIXIT", "ISSUE" },
+            --     },
+            --     TODO = { icon = "", color = "info" },
+            --     HACK = { icon = "", color = "warning" },
+            --     WARN = { icon = "", color = "warning", alt = { "WARNING", "XXX" } },
+            -- },
+          -- your configuration comes here
+          -- or leave it empty to use the default settings
+          -- refer to the configuration section below
+        }
       }
   },
   -- Configure any other settings here. See the documentation for more details.
@@ -278,3 +300,5 @@ require("lazy").setup({
 })
 
 vim.cmd.colorscheme("ayu")
+vim.api.nvim_set_hl(0, "WinSeparator", { bg = "NONE", fg = "#555555" })
+
