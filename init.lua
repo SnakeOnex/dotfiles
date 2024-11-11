@@ -76,10 +76,10 @@ vim.keymap.set("n", "<leader>-", "<C-w>s", { silent = true, desc = "Open new win
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = bufnr })
 
 -- toggle comments
-vim.keymap.set("n", "<C-/>", function()
+vim.keymap.set("n", "<C-_>", function()
   vim.cmd("norm gcc")
 end)
-vim.keymap.set("v", "<C-/>", function()
+vim.keymap.set("v", "<C-_>", function()
   vim.cmd("norm gc")
 end)
 
