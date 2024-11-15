@@ -68,6 +68,26 @@ vim.g.maplocalleader = ","
 
 -- escape key in terminal
 vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", { noremap = true })
+vim.api.nvim_create_autocmd("TermOpen", {
+  pattern = "*",
+  command = "setlocal nonumber norelativenumber",
+})
+
+-- tabs
+for i = 1, 9 do
+  vim.api.nvim_set_keymap('n', '<C-' .. i .. '>', ':<C-U>tabnext ' .. i .. '<CR>', {noremap = true, silent = true})
+end
+
+vim.api.nvim_create_user_command(
+  'TabLast', 
+  function(opts)
+    vim.cmd('tablast')
+    vim.cmd('tabnew ' .. (opts.args or ''))
+  end,
+  { nargs = '*' }
+)
+
+vim.api.nvim_set_keymap('n', '<C-n>', ':TabLast<CR>', {noremap = true, silent = true})
 
 -- Ensure you're in the correct mode for your mappings. Here, we use "n" for normal mode.
 vim.keymap.set("n", "<leader>|", "<C-w>v", { silent = true, desc = "Open new window vertically" })
@@ -132,9 +152,18 @@ require("lazy").setup({
         },
         config = function()
           require("neo-tree").setup({
-            vim.keymap.set("n", "<C-n>", "<Cmd>Neotree toggle<CR>")
-          })
+            window = {
+                mappings = {
+                    ["<C-j>"] = { "scroll_preview", config = {direction = -10} },
+                    ["<C-k>"] = { "scroll_preview", config = {direction = 10} },
+                    ["<C-f>"] = "close_window"
+                },
+            }
+        })
         end,
+        keys = {
+          { "<C-f>", "<Cmd>Neotree toggle<CR>" },
+        },
       },
       { 
         "zbirenbaum/copilot.lua",
@@ -345,7 +374,49 @@ require("lazy").setup({
             ft = { "markdown", "Avante" },
           },
         },
-      }
+      },
+      {
+        'akinsho/bufferline.nvim',
+        version = '*',
+        dependencies = 'nvim-tree/nvim-web-devicons',
+        config = function()
+          require("bufferline").setup{
+            options = {
+              mode = "tabs", -- To show tabs instead of buffers
+              numbers = "ordinal", -- Shows tab numbers
+              show_buffer_close_icons = false,
+              show_close_icon = true,
+              color_icons = false,
+              max_name_length = 12,
+              truncate_names = true,
+              tab_size = 15,
+              separator_style = "thin",
+              -- Customize colors to match your theme
+              -- You might need to adjust these based on your colorscheme
+              indicator = {
+                style = 'icon',
+                icon = '', --'▎',
+                buffer_close_icon = ' ',
+                modified_icon = '●',
+                close_icon = ' ',
+                left_trunc_marker = '<-', --'',
+                right_trunc_marker = '->', --'',
+              },
+              highlights = {
+                fill = {
+                  guifg = {attribute = "fg", highlight = "Normal"},
+                  guibg = {attribute = "bg", highlight = "StatusLineNC"},
+                },
+                background = {
+                  guifg = {attribute = "fg", highlight = "Normal"},
+                  guibg = {attribute = "bg", highlight = "StatusLine"}
+                },
+                -- ... more highlight configurations
+              }
+            }
+          }
+        end
+      },
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
