@@ -70,7 +70,7 @@ vim.g.maplocalleader = ","
 vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", { noremap = true })
 vim.api.nvim_create_autocmd("TermOpen", {
   pattern = "*",
-  command = "setlocal nonumber norelativenumber",
+  command = "setlocal nonumber norelativenumber scrolloff=0", -- Q: how to separate the commands? A: use a comma
 })
 
 -- tabs
