@@ -1,8 +1,8 @@
 #!/bin/sh
 monitor="eDP"
-stylus="ELAN2514:00 04F3:42C1 Stylus Pen (0)"
+stylus="ELAN2514:00 04F3:42C1 Stylus Pen(0)"
 touchscreen="ELAN2514:00 04F3:42C1"
-eraser="ELAN2514:00 04F3:42C1 Stylus Eraser (0)" # stylus with a button pressed
+eraser="ELAN2514:00 04F3:42C1 Stylus Eraser(0)" # stylus with a button pressed
 
 xinput --map-to-output 9 "$monitor"
 xinput --map-to-output 10 "$monitor"
