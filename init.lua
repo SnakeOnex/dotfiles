@@ -207,7 +207,10 @@ require("lazy").setup({
               ensure_installed = { "c", "lua", "vim", "python", "javascript", "html", "css", "json", "yaml" },
               sync_install = false,
               highlight = { enable = true },
-              indent = { enable = true },
+              indent = { 
+                  enable = true,
+                  disable = { "python" },
+              },
             })
         end
       },
