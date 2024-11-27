@@ -67,6 +67,7 @@ vim.g.mapleader = ","
 vim.g.maplocalleader = ","
 
 -- escape key in terminal
+vim.keymap.set('n', '<C-t>', ':terminal<CR>', {silent = true, desc = 'Open terminal'})
 vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", { noremap = true })
 vim.api.nvim_create_autocmd("TermOpen", {
   pattern = "*",
