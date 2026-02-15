@@ -201,7 +201,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+#bindsym $mod+a focus parent
 
 # open new empty workspace
 bindsym $mod+Shift+n exec --no-startup-id ~/.config/i3/scripts/empty_workspace
@@ -536,3 +536,10 @@ exec_always xrandr --output HDMI-A-0 --scale 1.25x1.25
 # ROG mouse: flat accel profile (no acceleration curve) + lower sensitivity
 exec_always --no-startup-id xinput set-prop "ASUSTeK ROG OMNI RECEIVER" "libinput Accel Profile Enabled" 0 1 0
 exec_always --no-startup-id xinput set-prop "ASUSTeK ROG OMNI RECEIVER" "libinput Accel Speed" -0.4
+
+# Super+C/V for copy/paste (Mac-like)
+bindsym --release $mod+c exec --no-startup-id xdotool key ctrl+c
+bindsym --release $mod+v exec --no-startup-id xdotool key ctrl+v
+bindsym --release $mod+x exec --no-startup-id xdotool key ctrl+x
+bindsym --release $mod+a exec --no-startup-id xdotool key ctrl+a
+bindsym --release $mod+z exec --no-startup-id xdotool key ctrl+z
