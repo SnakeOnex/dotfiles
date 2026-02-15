@@ -531,3 +531,8 @@ bindsym $mod+t exec --no-startup-id rofi -show window \
 exec_always --no-startup-id xset r rate 175 40
 exec_always --no-startup-id ~/dotfiles/auto_rotate.sh
 
+exec_always xrandr --output HDMI-A-0 --scale 1.25x1.25
+
+# ROG mouse: flat accel profile (no acceleration curve) + lower sensitivity
+exec_always --no-startup-id xinput set-prop "ASUSTeK ROG OMNI RECEIVER" "libinput Accel Profile Enabled" 0 1 0
+exec_always --no-startup-id xinput set-prop "ASUSTeK ROG OMNI RECEIVER" "libinput Accel Speed" -0.4
