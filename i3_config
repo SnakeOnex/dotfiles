@@ -125,7 +125,7 @@ bindsym $mod+r mode "resize"
 ######################################
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id kitty
+bindsym $mod+Return exec --no-startup-id ghostty
 # bindsym $mod+Return exec --no-startup-id kitty --session startup.conf
 
 # kill focused window
@@ -538,8 +538,8 @@ exec_always --no-startup-id xinput set-prop "ASUSTeK ROG OMNI RECEIVER" "libinpu
 exec_always --no-startup-id xinput set-prop "ASUSTeK ROG OMNI RECEIVER" "libinput Accel Speed" -0.4
 
 # Super+C/V for copy/paste (Mac-like)
-bindsym --release $mod+c exec --no-startup-id xdotool key ctrl+c
-bindsym --release $mod+v exec --no-startup-id xdotool key ctrl+v
-bindsym --release $mod+x exec --no-startup-id xdotool key ctrl+x
-bindsym --release $mod+a exec --no-startup-id xdotool key ctrl+a
-bindsym --release $mod+z exec --no-startup-id xdotool key ctrl+z
+bindsym --release $mod+c exec --no-startup-id ~/dotfiles/mac_keys.sh c
+bindsym --release $mod+v exec --no-startup-id ~/dotfiles/mac_keys.sh v
+bindsym --release $mod+x exec --no-startup-id ~/dotfiles/mac_keys.sh x
+bindsym --release $mod+a exec --no-startup-id ~/dotfiles/mac_keys.sh a
+bindsym --release $mod+z exec --no-startup-id ~/dotfiles/mac_keys.sh z
