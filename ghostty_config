@@ -1,0 +1,24 @@
+window-decoration = false
+
+# Theme
+theme = Abernathy
+
+# Cursor
+cursor-style = block
+cursor-style-blink = false
+
+# macOS tab bar - tabs integrated into titlebar, auto-matches bg
+macos-titlebar-style = tabs
+
+# Linux/GTK tab bar
+gtk-tabs-location = top
+gtk-titlebar = false
+gtk-titlebar-style = tabs
+gtk-wide-tabs = false
+gtk-custom-css = tab-style.css
+window-theme = ghostty
+window-titlebar-background = #111416
+window-titlebar-foreground = #eeeeec
+
+# Toggle tab overview popup
+keybind = ctrl+shift+space=toggle_tab_overview

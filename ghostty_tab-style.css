@@ -1,0 +1,87 @@
+/* Ghostty tab bar - minimal dark style matching Abernathy theme */
+
+/* Tab bar container - make it compact */
+tabbar {
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+}
+
+tabbar .box {
+  min-height: 28px;
+  background: #111416;
+}
+
+/* Hide the new tab (+) button */
+tabbar .start-action,
+tabbar .end-action {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+}
+
+tabbar .start-action button,
+tabbar .end-action button {
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+}
+
+/* Individual tabs */
+tab {
+  min-height: 24px;
+  padding: 0 10px;
+  margin: 2px 1px;
+  border-radius: 4px;
+  font-size: 0.85em;
+  color: #666666;
+  background: transparent;
+}
+
+/* Active/selected tab */
+tab:checked,
+tab:selected {
+  color: #eeeeec;
+  background: #333333;
+}
+
+/* Hover state */
+tab:hover:not(:checked):not(:selected) {
+  color: #999999;
+  background: #1a1d20;
+}
+
+/* Remove tab close buttons for cleaner look */
+tab button {
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+}
+
+tab:checked button,
+tab:selected button {
+  opacity: 0.5;
+}
+
+tab:checked button:hover,
+tab:selected button:hover {
+  opacity: 1;
+}
+
+/* Tab indicator line */
+tabbar tab indicator {
+  background: #1093f5;
+  min-height: 2px;
+  border-radius: 1px;
+}
+
+/* Remove any separator/border between tab bar and content */
+tabbar .box,
+tabbar actionbar {
+  border: none;
+  box-shadow: none;
+}
